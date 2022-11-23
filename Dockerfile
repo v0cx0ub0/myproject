@@ -1,6 +1,6 @@
 FROM node:18.7.0
 
-COPY ./node-express-hello-world  .
+RUN git clone https://github.com/eMahtab/node-express-hello-world.git
 
 WORKDIR node-express-hello-world
 
