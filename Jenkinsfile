@@ -6,7 +6,15 @@ pipeline {
   stages{
     stage('git clone') {
     steps {
-      sh 'rm -r /var/lib/jenkins/workspace/multibranch_development/*'
+      sh '''#!/bin/bash
+      newfile1=myproject
+      if [ -d /var/lib/jenkins/workspace/multibranch_development/"$newfile1" ]
+      then
+	      echo "File is found"
+	      rm -r /var/lib/jenkins/workspace/multibranch_development/"$newfile1"
+      else
+        echo "File is not found"
+      fi'''
       dir("codeBase") {
         sh 'git clone https://github.com/v0cx0ub0/myproject.git'
         
