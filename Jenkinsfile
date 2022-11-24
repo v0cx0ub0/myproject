@@ -16,7 +16,7 @@ pipeline {
     stage('Dockerfile build') {
     steps {
       dir("codeBase") {
-        sh 'docker build -t myproject:v1 myproject/.'
+        sh 'docker build -t myproject2:v1 myproject/.'
         }   
       }
     }
