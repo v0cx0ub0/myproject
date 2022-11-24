@@ -32,7 +32,7 @@ pipeline {
     steps {
       dir("codeBase") {
         sh 'myproject/script.sh 4201 '
-        sh 'docker run -d -p 4201:3000 myproject:v1'
+        sh 'docker run -d -p 4201:3000 myproject2:v1'
         }   
       }
     }
