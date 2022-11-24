@@ -6,7 +6,7 @@ pipeline {
   stages{
     stage('git clone') {
     steps {
-    
+      sh 'rm -r /var/lib/jenkins/workspace/multibranch_development/*'
       dir("codeBase") {
         sh 'git clone https://github.com/v0cx0ub0/myproject.git'
         
