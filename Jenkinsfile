@@ -8,10 +8,10 @@ pipeline {
     steps {
       sh '''#!/bin/bash
       newfile1=myproject
-      if [ -d /var/lib/jenkins/workspace/*/"$newfile1" ]
+      if [ -d /var/lib/jenkins/workspace/multibranch_main/"$newfile1" ]
       then
 	      echo "File is found"
-	      rm -r /var/lib/jenkins/workspace/*/"$newfile1"
+	      rm -r /var/lib/jenkins/workspace/multibranch_main/"$newfile1"
       else
         echo "File is not found"
       fi'''
